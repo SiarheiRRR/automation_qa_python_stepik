@@ -4,7 +4,8 @@ from selenium.webdriver.common.by import By
 from time import sleep
 import os
 class TestLogin:
-    def test_guest_should_see_login_link(self, browser):
+    @staticmethod
+    def test_guest_should_see_login_link(browser):
         link = f"https://stepik.org/lesson/236895/step/1"
         login = os.getenv('STEPIK_USER')
         password = os.getenv('STEPIK_PASSWORD')
